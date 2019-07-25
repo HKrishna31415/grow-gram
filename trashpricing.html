@@ -1,0 +1,167 @@
+<section style="padding-top: 70px;" class="inner-border -thin -bottom -lightgrey g--lightgrey la-paddingvertical--lg">
+    <div style="margin-top:-30px;" class="row switchRow">
+        <div class="la-marginbottom--md">
+            <div class="grid grid-mobilegutter">
+                <div class="col col-xl">
+                    <div class="switchWrapper center js-switch">
+                        <div style="pointer-events: all;cursor: pointer;" onclick="javascript:if(document.getElementById('planToggleInput').checked)document.getElementById('planToggleInput').click();" class="text colorOne left active">Monthly</div>
+                        <label class="switchPricing switch js-pricingToggle">
+                            <input id="planToggleInput" type="checkbox" class="switchInput"><span class="slider round colorOne"></span></label>
+                        <div style="pointer-events: all;cursor: pointer;" onclick="javascript:if(!document.getElementById('planToggleInput').checked)document.getElementById('planToggleInput').click();" class="middle colorTwo right"><span class="text">Annual</span><span class="additional">(Save 20%)</span></div>
+                    </div>
+                    <script>
+                        var a = document.querySelectorAll(".js-switch");
+                        for (const t of a) {
+                            var e = t.querySelector("input"),
+                                n = t.querySelector(".left"),
+                                i = t.querySelector(".right"),
+                                s = document.querySelectorAll(".slider")[0];
+                            if (e.checked) {
+                                i.classList.add("active");
+                                s.classList.add("active");
+                            } else
+                                n.classList.add("active");
+                            t.addEventListener("click", function() {
+                                var t = e.checked;
+                                n.classList.toggle("active", !t);
+                                i.classList.toggle("active", t);
+                                s.classList.toggle("active", t);
+                                document.querySelectorAll(".annualPricingWrapper")[0].style.display = t ? "flex" : 'none';
+                                document.querySelectorAll(".monthlyPricingWrapper")[0].style.display = t ? "none" : 'flex';
+                            })
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="la-marginbottom--lg">
+            <div class="grid grid-mobilegutter monthlyPricingWrapper">
+
+                <div class="col col-xl">
+                    <div id="monthlyPlan" class="sp-marginbottom--lg bg-white grid-card kard -dropshadow inner-border -top -dandelion">
+                        <div class="sp-paddinghorizontal--xl sp-paddingvertical--lg">
+                            <div class="sp-marginbottom--lg flexbox-center -horizontal"><img src="https://i.imgur.com/1nDAveE.png" alt="Micro Space" class="img-icon-space"></div>
+                            <p class="textalign-center sp-marginbottom--lg fontweight-medium -uppercase">Standard Growth</p>
+                        </div>
+                        <div class="grid-table">
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> 1-1000 Followers Per Month </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> Real-Time Results </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> Live Analytics </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center">24/7 Support</div>
+                            </div>
+                        </div>
+                        <div class="sp-paddinghorizontal--xl">
+                            <div class="flexbox-center -horizontal"><span class="money-sign">49<span style="font-size: 18px;" class="fontweight-medium"> / month</span></span>
+                            </div>
+                        </div>
+                        <div class="sp-paddinghorizontal--xl">
+                            <div class="col col-fixed"><a style="width: 100%;margin: 0 0 36px 0;padding: 16px 18px 16px 18px;" href="https://socialdream.chargebee.com/hosted_pages/plans/copy_of_copy_of_platinum-package11" class="btn btn--blue btn--large">START YOUR 7 DAY FREE TRIAL</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl">
+                    <div class="sp-marginbottom--lg bg-white grid-card kard -dropshadow inner-border -top -jade">
+                        <div class="sp-paddinghorizontal--xl sp-paddingvertical--lg">
+                            <div class="sp-marginbottom--lg flexbox-center -horizontal"><img src="https://i.imgur.com/Glc7z2R.png" alt="Turbo Plan" class="img-icon-space"></div>
+                            <p class="textalign-center sp-marginbottom--lg fontweight-medium -uppercase">Turbo Growth</p>
+                        </div>
+                        <div class="grid-table">
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"><b style="color:#00d490">1000+ Followers Per Month<br> (3x Faster)</b></div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"><span>Real-Time Results </span></div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> Live Analytics </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"><b style="color:#00d490"> Priority Support</b> </div>
+                            </div>
+                        </div>
+                        <div class="sp-paddinghorizontal--xl">
+                            <div class="flexbox-center -horizontal"><span class="money-sign">199<span style="font-size: 18px;" class="fontweight-medium"> / month</span></span>
+                            </div>
+                        </div>
+                        <div class="sp-paddinghorizontal--xl">
+                            <div class="col col-fixed"><a style="width: 100%;margin: 0 0 36px 0;padding: 16px 18px 16px 18px;" href="https://socialdream.chargebee.com/hosted_pages/plans/copy_of_co2py_of_platinum-package11" class="btn btn--blue btn--large">START YOUR 7 DAY FREE TRIAL</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Annual pricing-->
+            <div style="max-width: 800px !important;margin: 0 auto !important;display:none;" class="grid grid-mobilegutter annualPricingWrapper">
+                <div class="col col-xl">
+                    <div id="monthlyPlan" class="sp-marginbottom--lg bg-white grid-card kard -dropshadow inner-border -top -dandelion">
+                        <div class="sp-paddinghorizontal--xl sp-paddingvertical--lg">
+                            <div class="sp-marginbottom--lg flexbox-center -horizontal"><img src="https://i.imgur.com/1nDAveE.png" alt="Micro Space" class="img-icon-space"></div>
+                            <p class="textalign-center sp-marginbottom--lg fontweight-medium -uppercase">Standard Growth</p>
+                        </div>
+                        <div class="grid-table">
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> 1-1000 Followers Per Month </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> Real-Time Results </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> Live Analytics </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> 24/7 Support </div>
+                            </div>
+                        </div>
+                        <div style="padding: 30px 32px;">
+                            <div class="flexbox-center -horizontal"><span style="font-weight: 700;color: #008bff;" class="money-sign">39<span style="font-size: 18px;" class="fontweight-medium"> / month</span></span>
+                            </div>
+                            <br>
+                            <p style="padding-top: 11px;" class="textalign-center lineheight-title"> <b>$468</b>/year <span style="padding-top: 5px;color:#00c563">(Save <b>$572</b>/year)</span></p>
+                        </div>
+                        <div class="sp-paddinghorizontal--xl">
+                            <div class="col col-fixed"><a style="width: 100%;margin: 0 0 36px 0;padding: 16px 18px 16px 18px;" href="https://socialdream.chargebee.com/hosted_pages/plans/copy_of_copy_of_copy_of_platinum-package11" class="btn btn--blue btn--large">START YOUR 7 DAY FREE TRIAL</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl">
+                    <div class="sp-marginbottom--lg bg-white grid-card kard -dropshadow inner-border -top -jade">
+                        <div class="sp-paddinghorizontal--xl sp-paddingvertical--lg">
+                            <div class="sp-marginbottom--lg flexbox-center -horizontal"><img src="https://i.imgur.com/Glc7z2R.png" alt="Turbo Plan" class="img-icon-space"></div>
+                            <p class="textalign-center sp-marginbottom--lg fontweight-medium -uppercase">Turbo Growth</p>
+                        </div>
+                        <div class="grid-table">
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"><b style="color:#00d490">1000+ Followers Per Month<br> (3x Faster)</b></div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"><span>Real-Time Results </span></div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"> Live Analytics </div>
+                            </div>
+                            <div class="grid-table-cell flexbox-center -horizontal -vertical">
+                                <div class="textalign-center"><b style="color:#00d490"> Priority Support</b> </div>
+                            </div>
+                        </div>
+                        <div style="padding: 30px 32px;">
+                            <div class="flexbox-center -horizontal"><span style="font-weight: 700;color: #008bff;" class="money-sign">159<span style="font-size: 18px;" class="fontweight-medium"> / month</span></span>
+                            </div>
+                            <br>
+                            <p style="padding-top: 11px;" class="textalign-center lineheight-title"> <b>$1908</b>/year <span style="padding-top: 5px;color:#00c563">(Save <b>$480</b>/year)</span></p>
+                        </div>
+                        <div class="sp-paddinghorizontal--xl">
+                            <div class="col col-fixed"><a style="width: 100%;margin: 0 0 36px 0;padding: 16px 18px 16px 18px;" href="https://socialdream.chargebee.com/hosted_pages/plans/copy_of_copy_of_copy_of_copy_of_platinum-package11" class="btn btn--blue btn--large">START YOUR 7 DAY FREE TRIAL</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
